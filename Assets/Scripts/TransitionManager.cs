@@ -6,10 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class TransitionManager : MonoBehaviour
 {
-    public Button startButton;          // Assign in Inspector
-    public Image transitionImage;       // Assign in Inspector
-    public TextMeshProUGUI countdownText; // Assign in Inspector
-    public string nextSceneName = "Stage"; // Change to your target scene
+    public Button startButton;         
+    public Image transitionImage;       
+    public TMP_Text countdownText; 
+    public string nextSceneName = "Stage"; 
     private float countdownTime = 10f;
 
     void Start()
@@ -21,9 +21,9 @@ public class TransitionManager : MonoBehaviour
 
     void StartTransition()
     {
-        startButton.gameObject.SetActive(false);  // Hide button
-        transitionImage.gameObject.SetActive(true); // Show image
-        countdownText.gameObject.SetActive(true); // Show countdown
+        startButton.gameObject.SetActive(false);  
+        transitionImage.gameObject.SetActive(true);
+        countdownText.gameObject.SetActive(true);
         StartCoroutine(CountdownAndLoad());
     }
 
